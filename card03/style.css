@@ -1,0 +1,429 @@
+body {
+	margin: 0;
+	background-color: #ffffff;
+	color: #001524;
+	font-family: "M plus 1p", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+/* утилитные классы */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* компонент - ссылка */
+
+.link {
+	transition: all 0.2s ease-in-out 0s;
+	outline: none;
+	text-decoration: none;
+	color: #001524;
+}
+
+.link:visited {
+	color: #99a1a7;
+}
+
+.link:hover {
+	transition: all 0.2s ease-in-out 0s;
+	color: #de012c;
+}
+
+.link:focus,
+.link:active {
+	transition: all 0.2s ease-in-out 0s;
+	color: #c20127;
+}
+
+/* компонент - кнопка */
+
+.button {
+	box-sizing: border-box;
+	padding: 0;
+	border: 2px solid #001524;
+	border-radius: 4px;
+	background-color: #ffffff;
+	color: #001524;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* компонент - контейнер для карточки */
+
+.card-container {
+	box-sizing: border-box;
+	max-width: 1366px;
+	min-width: 1366px;
+	margin: 0 auto;
+	padding: 98px;
+}
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card__img-container {
+	box-sizing: border-box;
+	width: 700px;
+	margin-right: 70px;
+	flex-shrink: 0;
+}
+
+.card__info-container {
+	box-sizing: border-box;
+	width: 400px;
+}
+
+.card__info-tab-container {
+	margin-top: 60px;
+}
+
+/* компонент - галерея фотографий */
+
+.img-carousel {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 15px 30px;
+}
+
+.img-carousel__item img {
+	vertical-align: middle;
+}
+
+.img-carousel .active {
+	grid-column: 2 / 3;
+	grid-row: 1 / 5;
+}
+
+/* компонент - информация внутри карточки */
+
+.card-info {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows:
+		repeat(2, auto)
+		1fr
+		repeat(2, auto);
+}
+
+.card-info__title {
+	margin-top: 0;
+	margin-bottom: 25px;
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+.card-info__subtitle {
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.card-info__subtitle--price {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.card-info__subtitle-small {
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.card-info__stock-and-rate-block {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.card-info__stock {
+	margin: 0;
+	margin-right: 30px;
+	padding-left: 25px;
+	position: relative;
+}
+
+.card-info__stock::before {
+	content: "";
+
+	position: absolute;
+	width: 15px;
+	height: 10px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url("img/ok-icon.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.card-info__stars {
+	margin-right: 15px;
+}
+
+.card-info__link-to-reviews {
+	color: #001524;
+	font-family: "M plus 1p", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 27px;
+	font-weight: 500;
+}
+
+.card-info__memory-block,
+.card-info__color-block {
+	box-sizing: border-box;
+	padding-bottom: 16px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0, 21, 36, 0.1);
+}
+
+.card-info__data-list {
+	box-sizing: border-box;
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid rgba(0, 21, 36, 0.1);
+}
+
+.card-info__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-info__price-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+.card-info__price {
+	margin: 0;
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+.card-info__button-block {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-info__button {
+	min-height: 52px;
+	padding: 15px 10px;
+	margin-bottom: 20px;
+	border-color: #de012c;
+	background-color: #de012c;
+	color: #ffffff;
+}
+
+.card-info__button:hover {
+	border-color: #c20127;
+	background-color: #c20127;
+}
+
+.card-info__button:focus {
+	border-color: #c20127;
+	background-color: #c20127;
+}
+
+.card-info__button--pay {
+	min-height: 52px;
+	padding: 15px 10px;
+	border-color: #de012c;
+	color: #000000;
+}
+
+.card-info__button--pay span {
+	color: #de012c;
+}
+
+.card-info__button--pay:hover {
+	background-color: #001524;
+	border-color: #001524;
+	color: #ffffff;
+}
+
+/* компонент - выбор размера памяти */
+.memory-chooser {
+	display: flex;
+}
+
+.memory-chooser__label {
+	box-sizing: border-box;
+	width: 61px;
+	height: 29px;
+	border-radius: 4px;
+	transition: border-color 0.2s ease-in-out 0s;
+	border: 1px solid rgba(0, 21, 36, 0.1);
+	text-align: center;
+	font-size: 14px;
+	line-height: 29px;
+	cursor: pointer;
+}
+
+.memory-chooser__label:not(:last-child) {
+	margin-right: 15px;
+}
+
+.memory-chooser__item {
+	display: none;
+}
+
+.memory-chooser__item:checked + .memory-chooser__label {
+	border-color: #001524;
+	/* касается лейбла, только если прямо перед ним стоит выбранная радиокнопка */
+}
+
+/* компонент - выбор цвета */
+.color-chooser {
+	display: flex;
+}
+
+.color-chooser__item {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+	background-color: #000000;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: initial;
+	cursor: pointer;
+}
+
+.color-chooser__item::before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	box-sizing: border-box;
+	width: calc(30px + 5px * 2); /* вычисляем: размер элемента и два раза по отступу 5 пикселей */
+	height: calc(30px + 5px * 2);
+	background-color: inherit; /* унаследовать фон у элемента */
+}
+
+/* Эти свойства должны загораживать фон неактивного элемента  */
+.color-chooser__item::after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	box-sizing: border-box;
+	width: calc(30px + 5px * 2);
+	height: calc(30px + 5px * 2);
+	border: 5px solid #ffffff;
+}
+
+.color-chooser__item:checked::after {
+	top: -4px;
+	left: -4px;
+	width: calc(30px + 4px * 2); /* вычисление: на 1 пиксель меньше, чтобы осталась рамка */
+	height: calc(30px + 4px * 2);
+	border: 4px solid #ffffff;
+}
+
+.color-chooser__item:not(:last-child) {
+	margin-right: 15px;
+}
+
+/* компонент — список характеристик */
+.data-list {
+	margin: 0;
+}
+
+.data-list__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.data-list__row:not(:last-child) {
+	margin-bottom: 7px;
+}
+
+.data-list dt {
+	margin: 0;
+	color: #797d80;
+}
+
+.data-list dd {
+	margin: 0;
+	color: #001524;
+}
+
+/* компонент - переключатель меню - табы */
+
+.info-tabs__items {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+	border-bottom: 1px solid rgba(0, 21, 36, 0.1);
+}
+
+.info-tabs__item {
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #797d80;
+	font-size: 18px;
+	line-height: 27px;
+	font-weight: 500;
+	margin-right: 45px;
+	padding-bottom: 15px;
+}
+
+.info-tabs__item:focus {
+	border-bottom: 3px solid #001524;
+	color: #001524;
+}
+.info-tabs__body {
+	padding-top: 30px;
+}
+
+.info-tabs__block {
+	width: 900px;
+}
+
+.info-tabs__text {
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.info-tabs__text:last-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
