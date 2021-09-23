@@ -402,6 +402,7 @@ img {
 	font-weight: 500;
 	margin-right: 45px;
 	padding-bottom: 15px;
+	border-bottom: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .info-tabs__item:focus {
