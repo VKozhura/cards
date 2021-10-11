@@ -3,6 +3,6 @@ window.addEventListener("scroll", () => {
 	if (window.pageYOffset > 100) {
 		upButton.classList.add("scroll-up-link--showed");
 	} else {
-		setTimeout(() => upButton.classList.remove("scroll-up-link--showed"), 300);
+		upButton.classList.remove("scroll-up-link--showed");
 	}
 });
